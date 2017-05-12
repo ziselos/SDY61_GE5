@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Δημιούργησε νέο αρχείο:"
+        android:textSize="14dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Αποθήκευσε σε αρχείο:"
+        android:id="@+id/textView2"
+        android:textSize="14dp"
+        android:paddingTop="5dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_alignTop="@+id/btnSave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Άνοιξε κάποιο αρχείο:"
+        android:id="@+id/textView3"
+        android:textSize="14dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTextPrimary"
+        android:layout_below="@+id/btnSave"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="New"
+        android:onClick="newFile"
+        android:id="@+id/btnNew"
+        android:background="@color/colorAccent"
+        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Save"
+        android:id="@+id/btnSave"
+        android:onClick="saveFile"
+        android:background="@color/colorAccent"
+        android:layout_below="@+id/btnNew"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/btnNew"
+        android:layout_alignStart="@+id/btnNew" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Open"
+        android:onClick="openFile"
+        android:id="@+id/btnOpen"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/btnSave"
+        android:layout_alignLeft="@+id/btnSave"
+        android:layout_alignStart="@+id/btnSave" />
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_below="@+id/btnOpen"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/btnOpen"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    </ScrollView>
+
+</RelativeLayout>
